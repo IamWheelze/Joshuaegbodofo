@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentor Dashboard - Monitor member progress and provide guidance">
+    <title>Mentor Dashboard | World Changers</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/mentor.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Navigation -->
+    <nav class="dashboard-nav">
+        <div class="dashboard-nav-header">
+            <h2><span class="logo-accent">MENTOR</span> PORTAL</h2>
+        </div>
+
+        <ul class="dashboard-nav-menu">
+            <li class="nav-item active">
+                <a href="#overview" data-section="overview">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Overview</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#members" data-section="members">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Members</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#goals" data-section="goals">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Member Goals</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#progress" data-section="progress">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Progress Updates</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#reports" data-section="reports">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Write Reports</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="dashboard-nav-footer">
+            <a href="../index.html" class="logout-btn">
+                <span>🚪</span> Logout
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <div class="dashboard-main">
+        <!-- Top Bar -->
+        <div class="dashboard-topbar">
+            <div class="topbar-left">
+                <h1 id="sectionTitle">Mentor Dashboard</h1>
+            </div>
+            <div class="topbar-right">
+                <div class="user-info">
+                    <span>Egbodofo Joshua</span>
+                    <div class="user-avatar">EJ</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content Sections -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3 id="totalMembersCount">0</h3>
+                            <p>Total Members</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3 id="totalGoalsCount">0</h3>
+                            <p>Active Goals</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-info">
+                            <h3 id="totalProgressCount">0</h3>
+                            <p>Progress Updates</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <h3 id="totalReportsCount">0</h3>
+                            <p>Reports Written</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mentor-overview-grid">
+                    <div class="overview-card">
+                        <h3>Recent Member Activity</h3>
+                        <div id="recentActivityList" class="activity-list">
+                            <p class="empty-state">No recent activity</p>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <h3>Upcoming Sessions</h3>
+                        <div class="sessions-list">
+                            <div class="session-item">
+                                <h4>Weekly Check-in - Demo Member</h4>
+                                <p>Tomorrow at 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Members Section -->
+            <section id="members" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Program Members</h2>
+                </div>
+
+                <div id="membersList" class="members-grid">
+                    <div class="member-card">
+                        <div class="member-avatar">DM</div>
+                        <h3>Demo Member</h3>
+                        <p>member@demo.com</p>
+                        <div class="member-stats">
+                            <span>3 Goals</span>
+                            <span>5 Updates</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="viewMember(1)">View Profile</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Member Goals Section -->
+            <section id="goals" class="dashboard-section">
+                <div class="section-header">
+                    <h2>All Member Goals</h2>
+                </div>
+
+                <div id="allGoalsList" class="goals-list">
+                    <p class="empty-state">No member goals to display</p>
+                </div>
+            </section>
+
+            <!-- Progress Updates Section -->
+            <section id="progress" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Member Progress Updates</h2>
+                </div>
+
+                <div id="allProgressList" class="progress-feed">
+                    <p class="empty-state">No progress updates yet</p>
+                </div>
+            </section>
+
+            <!-- Write Reports Section -->
+            <section id="reports" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Write Member Reports</h2>
+                </div>
+
+                <div class="report-form-container">
+                    <div class="card">
+                        <h3>Create New Report</h3>
+                        <form id="reportForm">
+                            <div class="form-group">
+                                <label for="reportMember" class="form-label">Select Member *</label>
+                                <select id="reportMember" class="form-select" required>
+                                    <option value="">Choose a member...</option>
+                                    <option value="1">Demo Member</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reportTitle" class="form-label">Report Title *</label>
+                                <input type="text" id="reportTitle" class="form-input" required
+                                    placeholder="e.g., Week 2 Progress Review">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reportContent" class="form-label">Overall Assessment *</label>
+                                <textarea id="reportContent" class="form-textarea" required
+                                    placeholder="Provide an overall assessment of the member's progress..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reportStrengths" class="form-label">Strengths</label>
+                                <textarea id="reportStrengths" class="form-textarea"
+                                    placeholder="List key strengths (one per line)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reportImprovements" class="form-label">Areas for Improvement</label>
+                                <textarea id="reportImprovements" class="form-textarea"
+                                    placeholder="List areas for improvement (one per line)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reportNextSteps" class="form-label">Next Steps</label>
+                                <textarea id="reportNextSteps" class="form-textarea"
+                                    placeholder="List recommended next steps (one per line)"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Report to Member</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="recent-reports">
+                    <h3>Recently Sent Reports</h3>
+                    <div id="sentReportsList" class="reports-list">
+                        <p class="empty-state">No reports sent yet</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/mentor.js"></script>
+</body>
+</html>

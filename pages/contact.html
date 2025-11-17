@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with the World Changers team. We're here to answer your questions about the mentorship program.">
+    <title>Contact Us | World Changers Mentorship</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">WORLD</span> CHANGERS
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="curriculum.html" class="nav-link">Curriculum</a></li>
+                <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="apply.html" class="nav-link nav-cta">Apply Now</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="text-white">Get In Touch</h1>
+            <p class="text-white" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">
+                Have questions about the World Changers program? We're here to help.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 4rem;">
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Let's Connect</h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 3rem; color: var(--dark-gray);">
+                        Whether you have questions about the program, need more information, or want to
+                        discuss your goals before applying, we're here to support you on your journey.
+                    </p>
+
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--primary-deep-blue); margin-bottom: 1.5rem;">Contact Information</h3>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Email</h4>
+                            <p style="margin: 0; font-size: 1.125rem;">
+                                <a href="mailto:info@worldchangers.com" style="color: var(--primary-deep-blue); text-decoration: none;">
+                                    info@worldchangers.com
+                                </a>
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Response Time</h4>
+                            <p style="margin: 0; color: var(--dark-gray);">
+                                We typically respond within 24-48 hours on business days.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Office Hours</h4>
+                            <p style="margin: 0; color: var(--dark-gray);">
+                                Monday - Friday: 9:00 AM - 6:00 PM WAT
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="background: var(--gradient-primary); color: var(--white);">
+                        <h3 style="color: var(--white); margin-bottom: 1rem;">Ready to Apply?</h3>
+                        <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem;">
+                            If you're ready to join the World Changers program, submit your application today.
+                        </p>
+                        <a href="apply.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <div class="card">
+                        <h2 style="margin-bottom: 2rem;">Send Us a Message</h2>
+
+                        <form id="contactForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailContact" class="form-label">Email *</label>
+                                <input type="email" id="emailContact" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select id="subject" name="subject" class="form-select" required>
+                                    <option value="">Select a subject...</option>
+                                    <option value="program-inquiry">Program Inquiry</option>
+                                    <option value="application-status">Application Status</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" required
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick Answers to Common Questions</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-deep-blue); margin-bottom: 1rem;">
+                        How long is the World Changers program?
+                    </h3>
+                    <p style="color: var(--dark-gray); margin: 0;">
+                        The initial commitment is 3 months with a 4-week core curriculum. However, the frameworks
+                        and community support are designed for a 2-year growth journey.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-deep-blue); margin-bottom: 1rem;">
+                        What is the time commitment required?
+                    </h3>
+                    <p style="color: var(--dark-gray); margin: 0;">
+                        You should plan for weekly mentorship sessions (1-2 hours), daily implementation work,
+                        and participation in the online community. Most successful participants dedicate 5-10
+                        hours per week to the program.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-deep-blue); margin-bottom: 1rem;">
+                        Is the program conducted online or in-person?
+                    </h3>
+                    <p style="color: var(--dark-gray); margin: 0;">
+                        The program is primarily conducted online, making it accessible to participants globally.
+                        Mentorship sessions, coursework, and community interactions are all virtual.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary-deep-blue); margin-bottom: 1rem;">
+                        What if I'm not currently running a business?
+                    </h3>
+                    <p style="color: var(--dark-gray); margin: 0;">
+                        That's okay! The program is designed for intentional individuals at various stages -
+                        from those with just an idea to established entrepreneurs. What matters most is your
+                        commitment to growth and impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>World Changers</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8);">
+                        Empowering intentional leaders to build ethical, scalable, and impactful businesses
+                        that change the world.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Egbodofo Joshua</a></li>
+                        <li><a href="curriculum.html">Curriculum</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Program</h3>
+                    <ul class="footer-links">
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="../dashboard/login.html">Member Login</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@worldchangers.com">info@worldchangers.com</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 World Changers - Egbodofo Joshua Mentorship Program. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

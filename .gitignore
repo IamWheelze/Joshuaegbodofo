@@ -1,0 +1,40 @@
+# World Changers Platform - Git Ignore
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if you add Node.js later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+
+# Build files (if you add a build process)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+logs/
+*.log
+
+# Firebase config (keep template, ignore actual config)
+firebase-config.js
+
+# Image uploads (keep structure, ignore uploads)
+assets/images/uploads/

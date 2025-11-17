@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="World Changers Member Dashboard - Track goals, share progress, and connect with your mentor">
+    <title>Dashboard | World Changers</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Navigation -->
+    <nav class="dashboard-nav">
+        <div class="dashboard-nav-header">
+            <h2><span class="logo-accent">WORLD</span> CHANGERS</h2>
+        </div>
+
+        <ul class="dashboard-nav-menu">
+            <li class="nav-item active">
+                <a href="#overview" data-section="overview">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Overview</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#goals" data-section="goals">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Goal Hub</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#progress" data-section="progress">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Progress Stream</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#mentor" data-section="mentor">
+                    <span class="nav-icon">💬</span>
+                    <span class="nav-text">Mentor Reports</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#profile" data-section="profile">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-text">Profile</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="dashboard-nav-footer">
+            <a href="../index.html" class="logout-btn">
+                <span>🚪</span> Logout
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <div class="dashboard-main">
+        <!-- Top Bar -->
+        <div class="dashboard-topbar">
+            <div class="topbar-left">
+                <h1 id="sectionTitle">Dashboard Overview</h1>
+            </div>
+            <div class="topbar-right">
+                <div class="user-info">
+                    <span id="userName">Welcome, Member</span>
+                    <div class="user-avatar">M</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content Sections -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3 id="activeGoalsCount">0</h3>
+                            <p>Active Goals</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h3 id="completedGoalsCount">0</h3>
+                            <p>Completed Goals</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-info">
+                            <h3 id="progressUpdatesCount">0</h3>
+                            <p>Progress Updates</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💬</div>
+                        <div class="stat-info">
+                            <h3 id="mentorReportsCount">0</h3>
+                            <p>Mentor Reports</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Recent Goals</h3>
+                        <div id="recentGoalsList" class="recent-list">
+                            <p class="empty-state">No goals yet. Create your first goal in the Goal Hub!</p>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <h3>Latest Progress Updates</h3>
+                        <div id="recentProgressList" class="recent-list">
+                            <p class="empty-state">No progress updates yet. Share your progress in the Progress Stream!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Goal Hub Section -->
+            <section id="goals" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Goal-Setting & Accountability Hub</h2>
+                    <button class="btn btn-primary" id="addGoalBtn">+ Add New Goal</button>
+                </div>
+
+                <div class="goals-container">
+                    <div id="goalsList" class="goals-list">
+                        <p class="empty-state">No goals yet. Click "Add New Goal" to get started!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Stream Section -->
+            <section id="progress" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Progress Stream</h2>
+                    <button class="btn btn-primary" id="addProgressBtn">+ Share Progress</button>
+                </div>
+
+                <div class="progress-stream">
+                    <div id="progressFeed" class="progress-feed">
+                        <p class="empty-state">No progress updates yet. Share your first update!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mentor Reports Section -->
+            <section id="mentor" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Mentor Reports & Communication</h2>
+                </div>
+
+                <div class="mentor-reports">
+                    <div id="mentorReportsList" class="reports-list">
+                        <p class="empty-state">No reports yet from your mentor.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Your Profile</h2>
+                </div>
+
+                <div class="profile-container">
+                    <div class="card">
+                        <h3>Personal Information</h3>
+                        <form id="profileForm">
+                            <div class="form-group">
+                                <label for="profileName" class="form-label">Full Name</label>
+                                <input type="text" id="profileName" class="form-input" value="Demo Member">
+                            </div>
+                            <div class="form-group">
+                                <label for="profileEmail" class="form-label">Email</label>
+                                <input type="email" id="profileEmail" class="form-input" value="member@demo.com" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileBio" class="form-label">Bio</label>
+                                <textarea id="profileBio" class="form-textarea" rows="4">Aspiring entrepreneur focused on building impactful businesses.</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Add Goal Modal -->
+    <div id="goalModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Goal</h2>
+                <button class="modal-close" id="closeGoalModal">&times;</button>
+            </div>
+            <form id="goalForm">
+                <div class="form-group">
+                    <label for="goalTitle" class="form-label">What do you plan to do? *</label>
+                    <input type="text" id="goalTitle" class="form-input" required placeholder="E.g., Launch my MVP">
+                </div>
+
+                <div class="form-group">
+                    <label for="goalHow" class="form-label">How will you do it? *</label>
+                    <textarea id="goalHow" class="form-textarea" required placeholder="Describe your approach and strategy..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="goalCurrent" class="form-label">What are you currently working on? *</label>
+                    <textarea id="goalCurrent" class="form-textarea" required placeholder="Describe your current progress..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="goalDeadline" class="form-label">Target Deadline</label>
+                    <input type="date" id="goalDeadline" class="form-input">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelGoalBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Goal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Progress Modal -->
+    <div id="progressModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Progress Update</h2>
+                <button class="modal-close" id="closeProgressModal">&times;</button>
+            </div>
+            <form id="progressForm">
+                <div class="form-group">
+                    <label for="progressTitle" class="form-label">Update Title *</label>
+                    <input type="text" id="progressTitle" class="form-input" required placeholder="E.g., Completed user research">
+                </div>
+
+                <div class="form-group">
+                    <label for="progressDescription" class="form-label">Description *</label>
+                    <textarea id="progressDescription" class="form-textarea" required placeholder="Describe what you've accomplished..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="progressImage" class="form-label">Add Image (optional)</label>
+                    <input type="file" id="progressImage" class="form-input" accept="image/*">
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelProgressBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Share Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

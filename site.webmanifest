@@ -1,0 +1,20 @@
+{
+    "name": "World Changers - Egbodofo Joshua Mentorship",
+    "short_name": "World Changers",
+    "description": "Transform from passive aspiration to active, high-leverage desire with exclusive mentorship from Egbodofo Joshua",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A1929",
+    "theme_color": "#0A1929",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/images/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["education", "business", "productivity"],
+    "screenshots": []
+}
